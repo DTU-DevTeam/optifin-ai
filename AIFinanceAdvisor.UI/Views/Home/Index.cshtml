@@ -1,0 +1,140 @@
+﻿
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Box</title>
+    <style>
+        .user {
+            float: right;
+            margin-left: 100%;
+            width: 600px;
+            margin-bottom: 20px;
+            background: gray;
+            padding: 5px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="flex-1 flex flex-col">
+        <div class="flex-1 overflow-y-auto p-8">
+            <pre id="StreamedData"></pre>
+            <div id="chat-messages"></div>
+        </div>
+        <form id="chat-form" class="border-t border-gray-700 p-4 flex items-end">
+            <input type="text" id="chat-input" class="flex-1 bg-gray-800 text-white p-2 rounded-l" placeholder="Nhập tin nhắn..." autocomplete="off" />
+            <button id="chat-button" class="bg-gray-700 text-white p-2 rounded-r" type="submit"><i class="fas fa-paper-plane"></i></button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let reconnectDelay = 1000;
+            let maxRetries = 5;
+            let retryCount = 0;
+            let pingInterval;
+            let chatSocket;
+
+            function connectWebSocket() {
+                console.log("🔄 Đang kết nối WebSocket...");
+                chatSocket = new WebSocket("wss://localhost:7057/ws");
+
+                chatSocket.addEventListener("open", function (event) {
+                    console.log("✅ WebSocket đã kết nối!", event);
+                    retryCount = 0; // Reset số lần thử lại
+                    startPing();
+                });
+
+                chatSocket.addEventListener("message", function (event) {
+                    if (event.data === "pong") return; // Bỏ qua phản hồi ping
+
+                    appendMessage(event.data, "assistant");
+                    console.log(event.data);
+                    chatSocket.send("ack");
+                });
+
+                chatSocket.addEventListener("error", function (event) {
+                    console.error("❌ WebSocket gặp lỗi:", event);
+                });
+
+                chatSocket.addEventListener("close", function (event) {
+                    console.warn("🔌 WebSocket đã đóng!", event);
+                    stopPing();
+                    if (retryCount < maxRetries) {
+                        retryCount++;
+                        setTimeout(connectWebSocket, reconnectDelay);
+                    } else {
+                        console.error("❌ Không thể kết nối lại sau nhiều lần thử!");
+                    }
+                });
+            }
+
+            function startPing() {
+                if (pingInterval) clearInterval(pingInterval);
+                pingInterval = setInterval(() => {
+                    if (chatSocket.readyState === WebSocket.OPEN) {
+                        console.log("🏓 Gửi ping để giữ kết nối...");
+                        chatSocket.send("ping");
+                    }
+                }, 30000);
+            }
+
+            function stopPing() {
+                if (pingInterval) {
+                    clearInterval(pingInterval);
+                    pingInterval = null;
+                }
+            }
+
+            function appendMessage(message, className) {
+                const chatMessages = document.getElementById("chat-messages");
+                let lastMessage = chatMessages.lastChild;
+                const shouldAutoScroll = chatMessages.scrollTop + chatMessages.clientHeight >= chatMessages.scrollHeight;
+
+                if (lastMessage && lastMessage.classList.contains(className)) {
+                    
+                    lastMessage.textContent += message;
+
+                    
+                    
+                } else {
+                    let messageElement = document.createElement("div");
+                    messageElement.classList.add("chat-message", className);
+                    messageElement.textContent = message;
+                    chatMessages.appendChild(messageElement);
+                }
+
+                if (shouldAutoScroll) {
+                    chatMessages.scrollTop = chatMessages.scrollHeight;
+                }
+            }
+
+            document.getElementById("chat-form").addEventListener("submit", function (event) {
+                event.preventDefault();
+                const inputElement = document.getElementById("chat-input");
+                const message = inputElement.value.trim();
+
+                if (message) {
+                    appendMessage(message, "user");
+
+                    if (chatSocket.readyState === WebSocket.OPEN) {
+                        chatSocket.send(JSON.stringify({ content: message }));
+                    } else {
+                        console.error("⚠️ WebSocket chưa kết nối! Tin nhắn không thể gửi.");
+                    }
+
+                    inputElement.value = "";
+                }
+            });
+
+            // Tự động kết nối ngay khi tải trang
+            connectWebSocket();
+        });
+
+    </script>
+</body>
+</html>

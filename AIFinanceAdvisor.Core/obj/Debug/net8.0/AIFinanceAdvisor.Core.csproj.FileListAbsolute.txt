@@ -1,0 +1,11 @@
+C:\Optifin-Project\AIFinanceAdvisor.Solution\AIFinanceAdvisor.Core\bin\Debug\net8.0\AIFinanceAdvisor.Core.deps.json
+C:\Optifin-Project\AIFinanceAdvisor.Solution\AIFinanceAdvisor.Core\bin\Debug\net8.0\AIFinanceAdvisor.Core.dll
+C:\Optifin-Project\AIFinanceAdvisor.Solution\AIFinanceAdvisor.Core\bin\Debug\net8.0\AIFinanceAdvisor.Core.pdb
+C:\Optifin-Project\AIFinanceAdvisor.Solution\AIFinanceAdvisor.Core\obj\Debug\net8.0\AIFinanceAdvisor.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Optifin-Project\AIFinanceAdvisor.Solution\AIFinanceAdvisor.Core\obj\Debug\net8.0\AIFinanceAdvisor.Core.AssemblyInfoInputs.cache
+C:\Optifin-Project\AIFinanceAdvisor.Solution\AIFinanceAdvisor.Core\obj\Debug\net8.0\AIFinanceAdvisor.Core.AssemblyInfo.cs
+C:\Optifin-Project\AIFinanceAdvisor.Solution\AIFinanceAdvisor.Core\obj\Debug\net8.0\AIFinanceAdvisor.Core.csproj.CoreCompileInputs.cache
+C:\Optifin-Project\AIFinanceAdvisor.Solution\AIFinanceAdvisor.Core\obj\Debug\net8.0\AIFinanceAdvisor.Core.dll
+C:\Optifin-Project\AIFinanceAdvisor.Solution\AIFinanceAdvisor.Core\obj\Debug\net8.0\refint\AIFinanceAdvisor.Core.dll
+C:\Optifin-Project\AIFinanceAdvisor.Solution\AIFinanceAdvisor.Core\obj\Debug\net8.0\AIFinanceAdvisor.Core.pdb
+C:\Optifin-Project\AIFinanceAdvisor.Solution\AIFinanceAdvisor.Core\obj\Debug\net8.0\ref\AIFinanceAdvisor.Core.dll

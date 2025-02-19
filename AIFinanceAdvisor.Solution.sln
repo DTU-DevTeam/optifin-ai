@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIFinanceAdvisor.UI", "AIFinanceAdvisor.UI\AIFinanceAdvisor.UI.csproj", "{DFF03014-3B92-4ED5-819D-8B4368D0D1F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8A175901-B962-4F2A-9435-A228EEDC322B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIFinanceAdvisor.Core", "AIFinanceAdvisor.Core\AIFinanceAdvisor.Core.csproj", "{6ACC4EB2-32A7-40AF-BBD4-FC6C7BE579F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFF03014-3B92-4ED5-819D-8B4368D0D1F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFF03014-3B92-4ED5-819D-8B4368D0D1F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFF03014-3B92-4ED5-819D-8B4368D0D1F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFF03014-3B92-4ED5-819D-8B4368D0D1F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ACC4EB2-32A7-40AF-BBD4-FC6C7BE579F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ACC4EB2-32A7-40AF-BBD4-FC6C7BE579F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ACC4EB2-32A7-40AF-BBD4-FC6C7BE579F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ACC4EB2-32A7-40AF-BBD4-FC6C7BE579F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DFF03014-3B92-4ED5-819D-8B4368D0D1F7} = {8A175901-B962-4F2A-9435-A228EEDC322B}
+		{6ACC4EB2-32A7-40AF-BBD4-FC6C7BE579F6} = {8A175901-B962-4F2A-9435-A228EEDC322B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F58251C4-DB95-4C18-BBD1-A90A717D270A}
+	EndGlobalSection
+EndGlobal

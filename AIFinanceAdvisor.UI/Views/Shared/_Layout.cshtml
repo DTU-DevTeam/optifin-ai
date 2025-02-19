@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-gray-900 text-white h-screen flex">
+
+    <!-- Bọc Sidebar & Main Content chung một div -->
+    <div class="flex w-full h-full">
+
+        <!-- Sidebar -->
+        <div class="w-64 bg-gray-800 h-full flex flex-col">
+            <div class="flex items-center justify-center h-16 border-b border-gray-700">
+                <img class="optifin" src="~/pic/Logo_OptiFin_Favicon.png"/>
+                <span class="ml-2 text-xl font-semibold">OptiFin</span>
+            </div>
+            <div class="flex-1 overflow-y-auto">
+                <ul class="p-4 space-y-2">
+                    <li class="flex items-center space-x-2">
+                        <i class="fas fa-comments text-yellow-500"></i>
+                        <span>Frontend Developer</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <i class="fas fa-tools text-blue-500"></i>
+                        <span>IT Tech Support</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <i class="fas fa-search text-gray-500"></i>
+                        <span>Explore OptiFin</span>
+                    </li>
+                </ul>
+                <div class="border-t border-gray-700 p-4">
+                    <h2 class="text-sm font-semibold mb-2">Today</h2>
+                    <ul class="space-y-2">
+                        <li>---------</li>
+                    </ul>
+                    <h2 class="text-sm font-semibold mt-4 mb-2">Yesterday</h2>
+                    <ul class="space-y-2">
+                        <li>--------</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 p-4">
+                <button class="w-full bg-blue-600 text-white py-2 rounded">Upgrade plan</button>
+                <p class="text-xs text-gray-400 mt-2">More access to the best models</p>
+            </div>
+        </div>
+
+        <!-- Main Content (Phần chat) -->
+        @RenderBody()
+
+    </div> <!-- Kết thúc container flex -->
+
+</body>
+</html>
+
+<style>
+    img.optifin {
+        width: 70px;
+        height: 60px;
+    }
+</style>
+
+
+ 
