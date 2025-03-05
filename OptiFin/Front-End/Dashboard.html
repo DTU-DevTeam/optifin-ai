@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" type="image/png"
+        href="https://raw.githubusercontent.com/LeMinhTuanK28/optifin-ai/refs/heads/main/Logo_OptiFin_Favicon.png"
+        type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page - OptiFin</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cambria:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="Dashboard-Style.css">
+</head>
+
+<body>
+    <!--PAGE1-->
+    <!-- <div id="loading-screen"><iframe src="/Front-End/html-data/Loading-screen.html"
+            style="border: none; width: 100%; height: 100%;"></iframe></div> -->
+
+    <video autoplay loop muted id="background-video">
+        <source src="https://res.cloudinary.com/diah3fvt1/video/upload/v1740493218/pdkxhfvrf2ihz0hwmeb4.mp4"
+            type="video/mp4">
+    </video>
+
+    <div class="navbar">
+        <div class="left-links">
+            <div class="header-name-app">
+                <h1>OptiFin</h1>
+            </div>
+            <a href="#" class="active">Home Page</a>
+            <a href="#">About Us</a>
+            <a href="#">Pricing</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+            <a href="#">Support and FAQ</a>
+            <!-- <div class="search-box">
+                <input placeholder="Search here..." type="text" />
+            </div> -->
+        </div>
+        <div class="right-links">
+            <b class="hover" id="login-btn">Login</b>
+            <b class="hover">Register</b>
+        </div>
+    </div>
+    <div class="header">
+        <div class="left-section">
+            <div class="slogan-a">
+                <div class="row">
+                    <span class="white-text">YOUR</span>
+                    <span class="blue-text">BENEFIT</span>
+                </div>
+            </div>
+            <div class="slogan-b">
+                <div class="row">
+                    <span class="white-text">OUR</span>
+                    <span class="green-text">MISSION</span>
+                </div>
+            </div>
+            <button class="button" onclick="redirectToLogin()">Let's get started</button>
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <i class="fas fa-user-circle"></i>
+            <p>Financial Profile</p>
+        </div>
+        <div>
+            <i class="fas fa-lock"></i>
+            <p>Account Security</p>
+        </div>
+        <div>
+            <i class="fas fa-robot"></i>
+            <p>AI Investment Insights</p>
+        </div>
+        <div>
+            <i class="fas fa-sync"></i>
+            <p>Portfolio Optimization</p>
+        </div>
+        <div>
+            <i class="fas fa-chart-bar"></i>
+            <p>Risk Prediction</p>
+        </div>
+        <div>
+            <i class="fas fa-bell"></i>
+            <p>Real-time Alerts</p>
+        </div>
+        <div>
+            <i class="fas fa-chart-line"></i>
+            <p>Market Forecasting</p>
+        </div>
+    </div>
+    <div class="chat-bubble" onclick="toggleChatBox()">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+    <div class="chat-box" id="chat-box">
+        <div class="chat-header">Chat with US</div>
+        <div id="user-info" class="user-info">
+            <input type="text" id="user-name" placeholder="Enter your name" />
+            <input type="email" id="user-email" placeholder="Enter your email" />
+            <button onclick="saveUserInfo()">Save Info</button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="welcome-message">
+                <img src="https://raw.githubusercontent.com/LeMinhTuanK28/optifin-ai/refs/heads/main/Logo_OptiFin.png"
+                    alt="OptiFin Logo" style="max-width: 150px; height: auto;">
+                <p>Welcome to OptiFin - AI Chat!</p>
+                <p>Contact us: (+84) 762 528 509 contactme@optifin.com.vn</p>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input id="chat-input" placeholder="Type a message..." type="text" oninput="showTypingStatus()" />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <!-- Hide Login Form -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-login" class="close" onclick="closeLoginModal()">&times;</span>
+            <h2 style="font-family: Ceoruse, sans-serif; font-size: 40px; color: white;">Log in to OptiFin</h2>
+            <div>
+                <input type="text" id="username" placeholder="Email or username">
+            </div>
+            <div>
+                <input type="password" id="password" placeholder="Password">
+            </div>
+            <button onclick="login()">Log in</button>
+            <p id="message" style="color: red;"></p>
+        </div>
+    </div>
+
+    <script src="Dashboard-Script.js"></script>
+
+    <!--PAGE2-->
+
+
+</body>
+
+</html>
