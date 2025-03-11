@@ -15,5 +15,6 @@ namespace AIFinanceAdvisor.UI.Controllers
             return View();
         }
 
+       
     }
 }
