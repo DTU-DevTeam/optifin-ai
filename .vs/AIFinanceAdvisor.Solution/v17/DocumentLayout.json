@@ -1,13 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Optifin-Project\\AIFinanceAdvisor.Solution\\",
+  "WorkspaceRootPath": "C:\\Users\\84353\\Desktop\\optifin-ai\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\trana\\AppData\\Roaming\\Microsoft\\UserSecrets\\1e634252-16d1-4671-aff8-24697a3866b2\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{DFF03014-3B92-4ED5-819D-8B4368D0D1F7}|AIFinanceAdvisor.UI\\AIFinanceAdvisor.UI.csproj|c:\\users\\84353\\desktop\\optifin-ai\\aifinanceadvisor.ui\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DFF03014-3B92-4ED5-819D-8B4368D0D1F7}|AIFinanceAdvisor.UI\\AIFinanceAdvisor.UI.csproj|solutionrelative:aifinanceadvisor.ui\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DFF03014-3B92-4ED5-819D-8B4368D0D1F7}|AIFinanceAdvisor.UI\\AIFinanceAdvisor.UI.csproj|c:\\optifin-project\\aifinanceadvisor.solution\\aifinanceadvisor.ui\\controllers\\optifincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DFF03014-3B92-4ED5-819D-8B4368D0D1F7}|AIFinanceAdvisor.UI\\AIFinanceAdvisor.UI.csproj|c:\\users\\84353\\desktop\\optifin-ai\\aifinanceadvisor.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFF03014-3B92-4ED5-819D-8B4368D0D1F7}|AIFinanceAdvisor.UI\\AIFinanceAdvisor.UI.csproj|solutionrelative:aifinanceadvisor.ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFF03014-3B92-4ED5-819D-8B4368D0D1F7}|AIFinanceAdvisor.UI\\AIFinanceAdvisor.UI.csproj|c:\\users\\84353\\desktop\\optifin-ai\\aifinanceadvisor.ui\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFF03014-3B92-4ED5-819D-8B4368D0D1F7}|AIFinanceAdvisor.UI\\AIFinanceAdvisor.UI.csproj|solutionrelative:aifinanceadvisor.ui\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFF03014-3B92-4ED5-819D-8B4368D0D1F7}|AIFinanceAdvisor.UI\\AIFinanceAdvisor.UI.csproj|c:\\users\\84353\\desktop\\optifin-ai\\aifinanceadvisor.ui\\controllers\\optifincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DFF03014-3B92-4ED5-819D-8B4368D0D1F7}|AIFinanceAdvisor.UI\\AIFinanceAdvisor.UI.csproj|solutionrelative:aifinanceadvisor.ui\\controllers\\optifincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\84353\\AppData\\Roaming\\Microsoft\\UserSecrets\\1e634252-16d1-4671-aff8-24697a3866b2\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFF03014-3B92-4ED5-819D-8B4368D0D1F7}|AIFinanceAdvisor.UI\\AIFinanceAdvisor.UI.csproj|c:\\users\\84353\\desktop\\optifin-ai\\aifinanceadvisor.ui\\aifinanceadvisor.ui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{DFF03014-3B92-4ED5-819D-8B4368D0D1F7}|AIFinanceAdvisor.UI\\AIFinanceAdvisor.UI.csproj|solutionrelative:aifinanceadvisor.ui\\aifinanceadvisor.ui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,27 +94,80 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "secrets.json",
-              "DocumentMoniker": "C:\\Users\\trana\\AppData\\Roaming\\Microsoft\\UserSecrets\\1e634252-16d1-4671-aff8-24697a3866b2\\secrets.json",
-              "RelativeDocumentMoniker": "..\\..\\Users\\trana\\AppData\\Roaming\\Microsoft\\UserSecrets\\1e634252-16d1-4671-aff8-24697a3866b2\\secrets.json",
-              "ToolTip": "C:\\Users\\trana\\AppData\\Roaming\\Microsoft\\UserSecrets\\1e634252-16d1-4671-aff8-24697a3866b2\\secrets.json",
-              "RelativeToolTip": "..\\..\\Users\\trana\\AppData\\Roaming\\Microsoft\\UserSecrets\\1e634252-16d1-4671-aff8-24697a3866b2\\secrets.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAIAQAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-02-19T02:57:08.37Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\84353\\Desktop\\optifin-ai\\AIFinanceAdvisor.UI\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "AIFinanceAdvisor.UI\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\84353\\Desktop\\optifin-ai\\AIFinanceAdvisor.UI\\Views\\Home\\Index.cshtml*",
+              "RelativeToolTip": "AIFinanceAdvisor.UI\\Views\\Home\\Index.cshtml*",
+              "ViewState": "AgIAABoAAAAAKDMzMzMLwCsAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-05T11:37:22.962Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "OptifinController.cs",
-              "DocumentMoniker": "C:\\Optifin-Project\\AIFinanceAdvisor.Solution\\AIFinanceAdvisor.UI\\Controllers\\OptifinController.cs",
-              "RelativeDocumentMoniker": "AIFinanceAdvisor.UI\\Controllers\\OptifinController.cs",
-              "ToolTip": "C:\\Optifin-Project\\AIFinanceAdvisor.Solution\\AIFinanceAdvisor.UI\\Controllers\\OptifinController.cs",
-              "RelativeToolTip": "AIFinanceAdvisor.UI\\Controllers\\OptifinController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\84353\\Desktop\\optifin-ai\\AIFinanceAdvisor.UI\\Program.cs",
+              "RelativeDocumentMoniker": "AIFinanceAdvisor.UI\\Program.cs",
+              "ToolTip": "C:\\Users\\84353\\Desktop\\optifin-ai\\AIFinanceAdvisor.UI\\Program.cs",
+              "RelativeToolTip": "AIFinanceAdvisor.UI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T18:54:55.463Z"
+              "WhenOpened": "2025-03-05T11:37:08.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\84353\\Desktop\\optifin-ai\\AIFinanceAdvisor.UI\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "AIFinanceAdvisor.UI\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\84353\\Desktop\\optifin-ai\\AIFinanceAdvisor.UI\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "AIFinanceAdvisor.UI\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAD4AAAAAyczMzMwmwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T11:37:00.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "secrets.json",
+              "DocumentMoniker": "C:\\Users\\84353\\AppData\\Roaming\\Microsoft\\UserSecrets\\1e634252-16d1-4671-aff8-24697a3866b2\\secrets.json",
+              "RelativeDocumentMoniker": "..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\1e634252-16d1-4671-aff8-24697a3866b2\\secrets.json",
+              "ToolTip": "C:\\Users\\84353\\AppData\\Roaming\\Microsoft\\UserSecrets\\1e634252-16d1-4671-aff8-24697a3866b2\\secrets.json",
+              "RelativeToolTip": "..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\1e634252-16d1-4671-aff8-24697a3866b2\\secrets.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-05T11:33:17.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AIFinanceAdvisor.UI",
+              "DocumentMoniker": "C:\\Users\\84353\\Desktop\\optifin-ai\\AIFinanceAdvisor.UI\\AIFinanceAdvisor.UI.csproj",
+              "RelativeDocumentMoniker": "AIFinanceAdvisor.UI\\AIFinanceAdvisor.UI.csproj",
+              "ToolTip": "C:\\Users\\84353\\Desktop\\optifin-ai\\AIFinanceAdvisor.UI\\AIFinanceAdvisor.UI.csproj",
+              "RelativeToolTip": "AIFinanceAdvisor.UI\\AIFinanceAdvisor.UI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-05T11:33:07.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OptifinController.cs",
+              "DocumentMoniker": "C:\\Users\\84353\\Desktop\\optifin-ai\\AIFinanceAdvisor.UI\\Controllers\\OptifinController.cs",
+              "RelativeDocumentMoniker": "AIFinanceAdvisor.UI\\Controllers\\OptifinController.cs",
+              "ToolTip": "C:\\Users\\84353\\Desktop\\optifin-ai\\AIFinanceAdvisor.UI\\Controllers\\OptifinController.cs",
+              "RelativeToolTip": "AIFinanceAdvisor.UI\\Controllers\\OptifinController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T18:54:55.463Z",
+              "EditorCaption": ""
             }
           ]
         }

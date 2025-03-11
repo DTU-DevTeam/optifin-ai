@@ -317,7 +317,10 @@
       "System.Threading.Channels/8.0.0": {},
       "AIFinanceAdvisor.Core/1.0.0": {
         "runtime": {
-          "AIFinanceAdvisor.Core.dll": {}
+          "AIFinanceAdvisor.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
