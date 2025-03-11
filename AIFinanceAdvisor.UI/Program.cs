@@ -7,8 +7,14 @@ using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddHttpClient();
 
-
+builder.Services.AddAuthentication("CookieAuth")
+    .AddCookie("CookieAuth", config =>
+    {
+        config.Cookie.Name = "AIFinanceAdvisor.Cookie";
+        config.LoginPath = "/Account/Login";
+    });
 
 
 builder.Services.AddControllersWithViews();
@@ -33,7 +39,8 @@ app.MapControllerRoute(
 app.UseWebSockets(); // Bật WebSocket
 
 
-
+app.UseAuthentication();
+app.UseAuthorization();
 
 
 app.Run();

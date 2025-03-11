@@ -1,0 +1,306 @@
+﻿@{
+    Layout = null;
+}
+
+@model AIFinanceAdvisor.Core.Services.RegisterModel;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+
+
+</head>
+<body>
+    <section class="container forms">
+
+        <div class="form login">
+            <a id="close" href="~/home/index"><i class="fi fi-br-cross-small"></i></a>
+            <div class="form-content">
+                <header>Register</header>
+                <form asp-action="register" asp-controller="account" method="post">
+                    <div class="field input-field">
+                        <input asp-for="Username" type="text" placeholder="" class="input" required>
+                        <label for="Username">Email or UserName</label>
+                    </div>
+
+                    <div class="field input-field">
+
+                        <input asp-for="Password" type="password" placeholder="" class="password" class="input" required>
+                        <label for="Password">Password</label>
+                        <i class='bx bx-hide eye-icon'></i>
+                    </div>
+
+                    <div class="field input-field">
+
+                        <input asp-for="PasswordConfirm" type="password" placeholder="" class="password" class="input" required>
+                        <label for="PasswordConfirm">Confirm Password</label>
+                       
+                    </div>
+
+                    <div class="error-message">
+
+                        @*{
+                        var errorsJson = TempData["Error"] as string;
+                        var errors = errorsJson != null ? JsonConvert.DeserializeObject<List<string>>(errorsJson) : new List<string>();
+                        if (errors != null)
+                        {
+                        foreach (var error in errors)
+                        {
+                        <p>@error</p>
+                        }
+                        }
+                        }*@
+                    </div>
+
+                    <div class="field button-field">
+                        <button>Register</button>
+                    </div>
+                </form>
+
+                <div class="form-link">
+                    <span>Have an account? <a href="~/acount/login" class="link signup-link">Login</a></span>
+                </div>
+            </div>
+
+            <div class="line"></div>
+
+
+
+        </div>
+    </section>
+    <!-- JavaScript -->
+    <script>
+        const forms = document.querySelector(".forms"),
+            pwShowHide = document.querySelectorAll(".eye-icon"),
+            links = document.querySelectorAll(".link");
+
+        pwShowHide.forEach(eyeIcon => {
+            eyeIcon.addEventListener("click", () => {
+                let pwFields = eyeIcon.parentElement.parentElement.querySelectorAll(".password");
+
+                pwFields.forEach(password => {
+                    if (password.type === "password") {
+                        password.type = "text";
+                        eyeIcon.classList.replace("bx-hide", "bx-show");
+                        return;
+                    }
+                    password.type = "password";
+                    eyeIcon.classList.replace("bx-show", "bx-hide");
+                })
+
+            })
+        })
+    </script>
+
+</body>
+</html>
+
+<style>
+    @@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+
+    .container {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /*background-color: #4070f4;*/
+        column-gap: 30px;
+        position: fixed; /* hoặc absolute, fixed, sticky */
+        z-index: 15; /* Giá trị số, càng lớn thì càng nằm trên */
+        padding-left: 170px;
+        margin-top: -40px;
+    }
+
+
+    .form {
+        position: relative;
+        max-width: 430px;
+        width: 100%;
+        padding: 30px;
+        border-radius: 6px;
+        background: #FFF;
+    }
+
+    #close {
+        position: absolute;
+        top: 6px;
+        right: 7px;
+        z-index: 15;
+    }
+
+        #close i {
+            font-size: 24px;
+            color: #555;
+            background: none;
+            border: none;
+        }
+
+        #close:hover i {
+            color: red;
+        }
+
+
+    header {
+        font-size: 28px;
+        font-weight: 600;
+        color: #232836;
+        text-align: center;
+    }
+
+    form {
+        margin-top: 30px;
+    }
+
+    .form .field {
+        position: relative;
+        height: 50px;
+        width: 100%;
+        margin-top: 20px;
+        border-radius: 6px;
+    }
+
+    .error-message {
+        margin-top: 10px;
+    }
+
+        .error-message p {
+            color: red;
+            font-size: 13px;
+            line-height: 0.1;
+        }
+
+    .field label {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: white;
+        padding: 0 5px;
+        font-size: 16px;
+        transition: all 0.3s ease-in-out;
+        pointer-events: none;
+    }
+
+    /* Khi input được focus hoặc có nội dung, label sẽ di chuyển lên trên */
+    .field input:focus + label,
+    .field input:not(:placeholder-shown) + label {
+        top: 0;
+        left: 5px;
+        font-size: 14px;
+        color: #007bff;
+    }
+
+    .field input,
+    .field button {
+        height: 100%;
+        width: 100%;
+        border: none;
+        font-size: 16px;
+        font-weight: 400;
+        border-radius: 6px;
+    }
+
+    .field input {
+        outline: none;
+        padding: 0 15px;
+        border: 1px solid#CACACA;
+    }
+
+        .field input:focus {
+            border-bottom-width: 2px;
+        }
+
+    .eye-icon {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        font-size: 18px;
+        color: #8b8b8b;
+        cursor: pointer;
+        padding: 5px;
+    }
+
+    .field button {
+        color: #fff;
+        background-color: #0171d3;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+        .field button:hover {
+            background-color: #016dcb;
+        }
+
+    .form-link {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+        .form-link span,
+        .form-link a {
+            font-size: 14px;
+            font-weight: 400;
+            color: #232836;
+        }
+
+    .form a {
+        color: #0171d3;
+        text-decoration: none;
+    }
+
+    .form-content a:hover {
+        text-decoration: underline;
+    }
+
+    .line {
+        position: relative;
+        height: 1px;
+        width: 100%;
+        margin: 36px 0;
+        background-color: #d4d4d4;
+    }
+
+        .line::before {
+            content: 'Or';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #FFF;
+            color: #8b8b8b;
+            padding: 0 15px;
+        }
+
+    .media-options a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+    @@media screen and (max-width: 400px) {
+        .form {
+            padding: 20px 10px;
+        }
+    }
+
+</style>
+
