@@ -9,11 +9,10 @@
     },
     {
         "message": "Login successful",
-        "username": "trananthuyen"
+        "username": "staff"
     },
     {
         "message": "Login successful",
-        "username": "trananthuyen",
-        "id": 3
+        "username": "admin"
     }
 ]

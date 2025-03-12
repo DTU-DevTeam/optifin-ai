@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for, flash, jsonify, request
+from flask import Flask, render_template, redirect, url_for, flash, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
@@ -40,59 +40,31 @@ class LoginForm(FlaskForm):
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
-    data = request.json  # Nhận dữ liệu JSON từ ASP.NET Core
-
-    if not data or "Username" not in data or "Password" not in data:
-        return jsonify({"success": False, "message": "Thiếu thông tin đăng ký"}), 400
-
-    # Kiểm tra nếu username đã tồn tại
-    existing_user = User.query.filter_by(username=data["Username"]).first()
-    if existing_user:
-        return jsonify({"success": False, "message": "Tên đăng nhập đã tồn tại"}), 409
-
-    # Hash mật khẩu và lưu vào database
-    hashed_password = bcrypt.generate_password_hash(data["Password"]).decode('utf-8')
-    new_user = User(username=data["Username"], password=hashed_password)
-
-    db.session.add(new_user)
-    db.session.commit()
-
-    return jsonify({"success": True, "message": "Đăng ký thành công"}), 201
-    #form = RegisterForm()
-    #if form.validate_on_submit():
-    #    hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
-    #    new_user = User(username=form.username.data, password=hashed_password)
-    #    db.session.add(new_user)
-    #    db.session.commit()
-    #    flash('Account created successfully!', 'success')
-    #    return redirect(url_for('login'))
-    #return render_template('register.html', form=form)
+    form = RegisterForm()
+    if form.validate_on_submit():
+        hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
+        new_user = User(username=form.username.data, password=hashed_password)
+        db.session.add(new_user)
+        db.session.commit()
+        flash('Account created successfully!', 'success')
+        return redirect(url_for('login'))
+    return render_template('register.html', form=form)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    data = request.json  # Nhận dữ liệu JSON từ ASP.NET Core
-    username = data.get("Username")
-    password = data.get("Password")
-
-    user = User.query.filter_by(username=username).first()
-    if user and bcrypt.check_password_hash(user.password, password):
-        login_user(user)
-        return jsonify({"success": True, "message": "Đăng nhập thành công"}), 200
-    return jsonify({"success": False, "message": "Sai tài khoản hoặc mật khẩu"}), 401
-
-    #form = LoginForm()
-    #if form.validate_on_submit():
-    #    user = User.query.filter_by(username=form.username.data).first()
-    #    if user and bcrypt.check_password_hash(user.password, form.password.data):
-    #        login_user(user)
-    #        return redirect(url_for('dashboard'))
-    #    flash('Invalid username or password', 'danger')
-    #return render_template('login.html', form=form)#
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user and bcrypt.check_password_hash(user.password, form.password.data):
+            login_user(user)
+            return redirect(url_for('dashboard'))
+        flash('Invalid username or password', 'danger')
+    return render_template('login.html', form=form)
 
 @app.route('/dashboard')
 @login_required
 def dashboard():
-    dashboard_data = {'message': 'Login successful', 'username': current_user.username, 'id': current_user.id}
+    dashboard_data = {'message': 'Login successful', 'username': current_user.username}
     try:
         with open(DATA_FILE, 'r') as file:
             data = json.load(file)
@@ -108,6 +80,24 @@ def dashboard():
 def logout():
     logout_user()
     return redirect(url_for('login'))
+
+@app.route('/users')
+@login_required  # chỉ cho ng da login xem 
+def users():
+    users_list = User.query.all()  
+    return render_template('users.html', users=users_list)
+
+@app.route('/delete_user/<int:user_id>', methods=['POST'])
+@login_required
+def delete_user(user_id):
+    user = User.query.get(user_id)
+    if user:
+        db.session.delete(user)
+        db.session.commit()
+        flash(f'User {user.username} đã bị xóa!', 'success')
+    else:
+        flash('Người dùng không tồn tại!', 'danger')
+    return redirect(url_for('users'))
 
 if __name__ == '__main__':
     with app.app_context():
