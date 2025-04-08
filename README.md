@@ -83,8 +83,8 @@
 
 - Step 1: Click on green button (https) to start the project
 - Step 2: Run Authentication system
-        + Open file optifin_ai_login (use visual studio code)
-        + Open your terminal, and write code command : py app.py
+        - Open file optifin_ai_login (use visual studio code)
+        - Open your terminal, and write code command : py app.py
 
 ### 🧪 Demo
 - Demo video and screenshots will be added soon.
@@ -92,10 +92,10 @@
 ### 🤝 Contributing
 - Contributed by: 
 
- - Mentor: Mr. Man, Nguyen Duc
+  - Mentor: Mr. Man, Nguyen Duc
     - We would like to express our sincere gratitude to our mentor, Mr. Nguyen Duc Man, for his invaluable support and guidance throughout this project.
     
- - CDIO-Group2
+  - CDIO-Group2
    - Thuyen, Tran An 
    - Tuan, Le Minh 
    - Duong, Tran Thi Thuy 
