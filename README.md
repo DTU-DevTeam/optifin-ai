@@ -87,24 +87,24 @@
         + Open your terminal, and write code command : py app.py
 
 ### 🧪 Demo
-Demo video and screenshots will be added soon.
+- Demo video and screenshots will be added soon.
 
 ### 🤝 Contributing
-Contributed by: 
+- Contributed by: 
 
-  Mentor: Mr. Man, Nguyen Duc
+ - Mentor: Mr. Man, Nguyen Duc
     - We would like to express our sincere gratitude to our mentor, Mr. Nguyen Duc Man, for his invaluable support and guidance throughout this project.
     
-  CDIO-Group2
-    Thuyen, Tran An 
-    Tuan, Le Minh 
-    Duong, Tran Thi Thuy 
-    Trang, Lieu Thi Thuy 
-    Huy, Nguyen Anh 
+ - CDIO-Group2
+   - Thuyen, Tran An 
+   - Tuan, Le Minh 
+   - Duong, Tran Thi Thuy 
+   - Trang, Lieu Thi Thuy 
+   - Huy, Nguyen Anh 
 
 📜 License
-This project is licensed under the MIT License.
+- This project is licensed under the MIT License.
 
 📞 Contact
-CDIO (CMU-CS 447 HIS (2025S)) - CMU_TPM4
+- CDIO (CMU-CS 447 HIS (2025S)) - CMU_TPM4
 
