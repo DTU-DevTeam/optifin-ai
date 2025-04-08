@@ -7,7 +7,10 @@ using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddHttpClient();
+builder.Services.AddHttpClient(); // Đăng ký HttpClient
+
+// Đăng ký IUserService và UserService
+builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.AddAuthentication("CookieAuth")
     .AddCookie("CookieAuth", config =>
@@ -16,14 +19,11 @@ builder.Services.AddAuthentication("CookieAuth")
         config.LoginPath = "/Account/Login";
     });
 
-
 builder.Services.AddControllersWithViews();
 
-builder.Configuration.SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json", optional: true, reloadOnChange: true).AddUserSecrets<Program>();
-
-//builder.Services.AddSingleton<IChatClient, ChatClient>();
-
-
+builder.Configuration.SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+    .AddUserSecrets<Program>();
 
 var app = builder.Build();
 
@@ -38,9 +38,7 @@ app.MapControllerRoute(
 
 app.UseWebSockets(); // Bật WebSocket
 
-
 app.UseAuthentication();
 app.UseAuthorization();
-
 
 app.Run();

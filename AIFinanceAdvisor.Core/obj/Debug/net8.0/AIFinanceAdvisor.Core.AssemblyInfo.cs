@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AIFinanceAdvisor.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e6023bb920598518d178bd2c38efaa16d50a411")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6e22ecc2c03dbf17c7a26d8fa6409149706299bd")]
 [assembly: System.Reflection.AssemblyProductAttribute("AIFinanceAdvisor.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AIFinanceAdvisor.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -95,13 +95,25 @@
                 let lastMessage = chatMessages.lastChild;
                 const shouldAutoScroll = chatMessages.scrollTop + chatMessages.clientHeight >= chatMessages.scrollHeight;
 
-                if (lastMessage && lastMessage.classList.contains(className)) {
-                    
-                    lastMessage.textContent += message;
+                        if (lastMessage && lastMessage.classList.contains(className)) {
 
-                    
-                    
-                } else {
+            //   lastMessage.textContent += message;
+            let trimmedMessage = message.trim();
+
+            // Kiểm tra nếu tin nhắn trước kết thúc bằng ":" hoặc nếu tin nhắn mới bắt đầu bằng số (và không phải trong từ)
+
+
+            if (lastMessage.innerHTML.trim().endsWith(":") || (/^\d+/.test(trimmedMessage))){ // && //.test(trimmedMessage))) {
+                console.log(trimmedMessage)
+                lastMessage.innerHTML += "<br>" + message; // Xuống dòng
+            } else {
+                console.log(trimmedMessage)
+                lastMessage.innerHTML += message; // Giữ nguyên trên cùng một dòng
+            }
+
+
+
+        } else {
                     let messageElement = document.createElement("div");
                     messageElement.classList.add("chat-message", className);
                     messageElement.textContent = message;

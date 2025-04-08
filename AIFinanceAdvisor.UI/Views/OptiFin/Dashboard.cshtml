@@ -53,9 +53,22 @@
             }
             else
             {
-                <b class="hover" id="login-btn">Login</b>
-                <b class="hover">Register</b>
+                <b class="hover" onclick="redirectToLogin()" id="login-btn">Login</b>
+                <b class="hover" onclick="redirectToSignUp()">Register</b>
             }
+
+            <script>
+
+                function redirectToLogin() {
+                    // Chuyển hướng đến trang login
+                    window.location.href = '/account/login'; // Thay đổi URL đến trang login của bạn
+                }
+
+                function redirectToSignUp() {
+                    window.location.href = '/account/register';
+                }
+
+            </script>
             
         </div>
     </div>

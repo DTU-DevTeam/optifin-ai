@@ -12,10 +12,12 @@ namespace AIFinanceAdvisor.UI.Controllers
     public class AccountController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
+        public IUserService UserService { get; set; }
 
-        public AccountController(IHttpClientFactory httpClientFactory)
+        public AccountController(IHttpClientFactory httpClientFactory, IUserService userService)
         {
-            _httpClientFactory = httpClientFactory;
+            _httpClientFactory = httpClientFactory ?? throw new ArgumentNullException(nameof(httpClientFactory));
+            UserService = userService ?? throw new ArgumentNullException(nameof(userService));
         }
 
         [HttpGet]
@@ -25,45 +27,28 @@ namespace AIFinanceAdvisor.UI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login([FromForm] LoginModel model)
+        public IActionResult Login([FromForm] LoginModel model)
         {
-            var _httpClient = _httpClientFactory.CreateClient();
-            string flaskApiUrl = "http://127.0.0.1:5000/login";
-
-            var jsonContent = new StringContent(JsonSerializer.Serialize(model), Encoding.UTF8, "application/json");
-
-            HttpResponseMessage response = await _httpClient.PostAsync(flaskApiUrl, jsonContent);
-            string responseBody = await response.Content.ReadAsStringAsync();
-
-            var data = JsonSerializer.Deserialize<FlaskAPI>(responseBody, new JsonSerializerOptions
+            if (UserService == null)
             {
-                PropertyNameCaseInsensitive = true
-            });
+                throw new NullReferenceException("UserService is not initialized.");
+            }
 
-            if (data.message.Equals("Đăng nhập thành công"))
+            if (string.IsNullOrWhiteSpace(model.Username) || string.IsNullOrWhiteSpace(model.Password))
             {
-                // 1. Tạo danh sách Claims
-                var claims = new List<Claim>
-                {
-                   new Claim(ClaimTypes.Name, model.Username), // Lưu username vào Claim
-                   new Claim("UserRole", "User") // Thêm role nếu cần
-                };
+                ViewData["ErrorMessage"] = "Username and password are required";
+                return View(model);
+            }
 
-                // 2. Tạo ClaimsIdentity
-                var identity = new ClaimsIdentity(claims, "CookieAuth");
-
-                // 3. Tạo Principal & đăng nhập bằng Cookie
-                var principal = new ClaimsPrincipal(identity);
-                await HttpContext.SignInAsync("CookieAuth", principal);
-
-                // 4. Điều hướng sau khi đăng nhập thành công
-
+            var user = UserService.Authenticate(model.Username, model.Password);
+            if (user != null)
+            {
+                // Logic for successful login
                 return RedirectToAction("Dashboard", "OptiFin");
             }
             else
             {
-                ViewBag.ErrorMessage = data.message;
-                return View();
+                return Unauthorized(new { Message = "Invalid credentials" });
             }
         }
 
@@ -74,35 +59,27 @@ namespace AIFinanceAdvisor.UI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Register([FromForm] RegisterModel model)
+        public IActionResult Register([FromForm] RegisterModel model)
         {
-            if (!ModelState.IsValid)
+            if (string.IsNullOrWhiteSpace(model.Username) || string.IsNullOrWhiteSpace(model.Password))
             {
+                ViewData["ErrorMessage"] = "Username and password are required";
                 return View();
             }
 
-            var _httpClient = _httpClientFactory.CreateClient();
-            string flaskApiUrl = "http://127.0.0.1:5000/register";
-
-            var jsonContent = new StringContent(JsonSerializer.Serialize(model), Encoding.UTF8, "application/json");
-
-            HttpResponseMessage response = await _httpClient.PostAsync(flaskApiUrl, jsonContent);
-            string responseBody = await response.Content.ReadAsStringAsync();
-
-            var data = JsonSerializer.Deserialize<FlaskAPI>(responseBody, new JsonSerializerOptions
+            if (model.Password.Length < 6)
             {
-                PropertyNameCaseInsensitive = true
-            });
+                ViewData["ErrorMessage"] = "Password is too weak";
+                return View();
+            }
 
-            if (data.message.Equals("Đăng ký thành công"))
+            if (UserService.Register(model.Username, model.Password))
             {
-
                 return RedirectToAction("Login", "Account");
             }
             else
             {
-                ViewBag.ErrorMessage = data.message;
-                return View();
+                return BadRequest(new { Message = "Username already exists" });
             }
         }
     }

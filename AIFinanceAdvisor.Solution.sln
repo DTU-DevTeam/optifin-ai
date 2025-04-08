@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8A175901-B96
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIFinanceAdvisor.Core", "AIFinanceAdvisor.Core\AIFinanceAdvisor.Core.csproj", "{6ACC4EB2-32A7-40AF-BBD4-FC6C7BE579F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AIFinanceAdvisor.Tests", "AIFinanceAdvisor.Tests\AIFinanceAdvisor.Tests.csproj", "{8191C8F7-7A1E-4F96-95A0-914E3A6C7800}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{6ACC4EB2-32A7-40AF-BBD4-FC6C7BE579F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6ACC4EB2-32A7-40AF-BBD4-FC6C7BE579F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6ACC4EB2-32A7-40AF-BBD4-FC6C7BE579F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8191C8F7-7A1E-4F96-95A0-914E3A6C7800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8191C8F7-7A1E-4F96-95A0-914E3A6C7800}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8191C8F7-7A1E-4F96-95A0-914E3A6C7800}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8191C8F7-7A1E-4F96-95A0-914E3A6C7800}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
