@@ -37,7 +37,7 @@
 - System.Net.WebSockets;
 - Microsoft.EntityFrameworkCore;
   
-3. Run the app
+### 3. Run the app
 
 - Step 1: Click on green button to start the project
 - Step 2: Run Authentication systemtiFin – AI Chatbot for Personal Finance Advice
