@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@using AIFinanceAdvisor.Core.Entities
+@{
+    List<ChatHistoryForUser> chatBoxHistory = ViewBag.ChatBoxHistory;
+}
+
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
@@ -15,15 +20,11 @@
         <!-- Sidebar -->
         <div class="w-64 bg-gray-800 h-full flex flex-col">
             <div class="flex items-center justify-center h-16 border-b border-gray-700">
-                <img class="optifin" src="~/pic/Logo_OptiFin_Favicon.png"/>
+                <img class="optifin" src="~/pic/Logo_OptiFin_Favicon.png" />
                 <span class="ml-2 text-xl font-semibold">OptiFin</span>
             </div>
             <div class="flex-1 overflow-y-auto">
                 <ul class="p-4 space-y-2">
-                    <li class="flex items-center space-x-2">
-                        <i class="fas fa-comments text-yellow-500"></i>
-                        <span>Frontend Developer</span>
-                    </li>
                     <li class="flex items-center space-x-2">
                         <i class="fas fa-tools text-blue-500"></i>
                         <span>IT Tech Support</span>
@@ -36,11 +37,21 @@
                 <div class="border-t border-gray-700 p-4">
                     <h2 class="text-sm font-semibold mb-2">Today</h2>
                     <ul class="space-y-2">
-                        <li>---------</li>
+                        <li><a href="/newchat">New Message</a></li>
                     </ul>
-                    <h2 class="text-sm font-semibold mt-4 mb-2">Yesterday</h2>
+                    <h2 class="text-sm font-semibold mt-4 mb-2">Recently</h2>
                     <ul class="space-y-2">
-                        <li>--------</li>
+                        @if (chatBoxHistory != null)
+                        {
+                            @foreach (var item in chatBoxHistory)
+                            {
+                                <li>
+                                    <a href="/historyMessage/@item.IdConversation">
+                                        @item.TopicMessage
+                                    </a>
+                                </li>
+                            }
+                        }
                     </ul>
                 </div>
             </div>
@@ -66,4 +77,3 @@
 </style>
 
 
- 

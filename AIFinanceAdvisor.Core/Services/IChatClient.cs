@@ -9,6 +9,6 @@ namespace AIFinanceAdvisor.Core.Services
 {
     public  interface IChatClient
     {
-        IAsyncEnumerable<ChatUpdate> CompleteChatStreamingAsync(string userMessage);
+        IAsyncEnumerable<ChatMessageHistoryForAssitant> CompleteChatStreamingAsync(string userMessage);
     }
 }

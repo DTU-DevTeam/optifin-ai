@@ -77,7 +77,7 @@ def login():
     user = User.query.filter_by(username=username).first()
     if user and bcrypt.check_password_hash(user.password, password):
         login_user(user)
-        return jsonify({"success": True, "message": "Đăng nhập thành công"}), 200
+        return jsonify({"success": True, "message": "Đăng nhập thành công", 'username': current_user.username, 'id': current_user.id}), 200
     return jsonify({"success": False, "message": "Sai tài khoản hoặc mật khẩu"}), 401
 
     #form = LoginForm()

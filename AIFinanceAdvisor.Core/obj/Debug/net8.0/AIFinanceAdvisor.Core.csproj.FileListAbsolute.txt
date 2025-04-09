@@ -21,3 +21,16 @@ C:\Users\84353\Desktop\optifin-ai\AIFinanceAdvisor.Core\obj\Debug\net8.0\AIFinan
 C:\Users\84353\Desktop\optifin-ai\AIFinanceAdvisor.Core\obj\Debug\net8.0\refint\AIFinanceAdvisor.Core.dll
 C:\Users\84353\Desktop\optifin-ai\AIFinanceAdvisor.Core\obj\Debug\net8.0\AIFinanceAdvisor.Core.pdb
 C:\Users\84353\Desktop\optifin-ai\AIFinanceAdvisor.Core\obj\Debug\net8.0\ref\AIFinanceAdvisor.Core.dll
+C:\Users\trana\OneDrive\Máy tính\optifin-ai\AIFinanceAdvisor.Core\bin\Debug\net8.0\AIFinanceAdvisor.Core.deps.json
+C:\Users\trana\OneDrive\Máy tính\optifin-ai\AIFinanceAdvisor.Core\bin\Debug\net8.0\AIFinanceAdvisor.Core.dll
+C:\Users\trana\OneDrive\Máy tính\optifin-ai\AIFinanceAdvisor.Core\bin\Debug\net8.0\AIFinanceAdvisor.Core.pdb
+C:\Users\trana\OneDrive\Máy tính\optifin-ai\AIFinanceAdvisor.Core\obj\Debug\net8.0\AIFinanceAdvisor.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\trana\OneDrive\Máy tính\optifin-ai\AIFinanceAdvisor.Core\obj\Debug\net8.0\AIFinanceAdvisor.Core.AssemblyInfoInputs.cache
+C:\Users\trana\OneDrive\Máy tính\optifin-ai\AIFinanceAdvisor.Core\obj\Debug\net8.0\AIFinanceAdvisor.Core.AssemblyInfo.cs
+C:\Users\trana\OneDrive\Máy tính\optifin-ai\AIFinanceAdvisor.Core\obj\Debug\net8.0\AIFinanceAdvisor.Core.csproj.CoreCompileInputs.cache
+C:\Users\trana\OneDrive\Máy tính\optifin-ai\AIFinanceAdvisor.Core\obj\Debug\net8.0\AIFinanceAdvisor.Core.sourcelink.json
+C:\Users\trana\OneDrive\Máy tính\optifin-ai\AIFinanceAdvisor.Core\obj\Debug\net8.0\AIFinanceAdvisor.Core.dll
+C:\Users\trana\OneDrive\Máy tính\optifin-ai\AIFinanceAdvisor.Core\obj\Debug\net8.0\refint\AIFinanceAdvisor.Core.dll
+C:\Users\trana\OneDrive\Máy tính\optifin-ai\AIFinanceAdvisor.Core\obj\Debug\net8.0\AIFinanceAdvisor.Core.pdb
+C:\Users\trana\OneDrive\Máy tính\optifin-ai\AIFinanceAdvisor.Core\obj\Debug\net8.0\ref\AIFinanceAdvisor.Core.dll
+C:\Users\trana\OneDrive\Máy tính\optifin-ai\AIFinanceAdvisor.Core\obj\Debug\net8.0\AIFinanceAdvisor.Core.csproj.AssemblyReference.cache

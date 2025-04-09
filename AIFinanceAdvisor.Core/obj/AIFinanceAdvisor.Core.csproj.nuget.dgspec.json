@@ -1,23 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\84353\\Desktop\\optifin-ai\\AIFinanceAdvisor.Core\\AIFinanceAdvisor.Core.csproj": {}
+    "C:\\Users\\trana\\OneDrive\\Máy tính\\optifin-ai\\AIFinanceAdvisor.Core\\AIFinanceAdvisor.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\84353\\Desktop\\optifin-ai\\AIFinanceAdvisor.Core\\AIFinanceAdvisor.Core.csproj": {
+    "C:\\Users\\trana\\OneDrive\\Máy tính\\optifin-ai\\AIFinanceAdvisor.Core\\AIFinanceAdvisor.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\84353\\Desktop\\optifin-ai\\AIFinanceAdvisor.Core\\AIFinanceAdvisor.Core.csproj",
+        "projectUniqueName": "C:\\Users\\trana\\OneDrive\\Máy tính\\optifin-ai\\AIFinanceAdvisor.Core\\AIFinanceAdvisor.Core.csproj",
         "projectName": "AIFinanceAdvisor.Core",
-        "projectPath": "C:\\Users\\84353\\Desktop\\optifin-ai\\AIFinanceAdvisor.Core\\AIFinanceAdvisor.Core.csproj",
-        "packagesPath": "C:\\Users\\84353\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\84353\\Desktop\\optifin-ai\\AIFinanceAdvisor.Core\\obj\\",
+        "projectPath": "C:\\Users\\trana\\OneDrive\\Máy tính\\optifin-ai\\AIFinanceAdvisor.Core\\AIFinanceAdvisor.Core.csproj",
+        "packagesPath": "C:\\Users\\trana\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\trana\\OneDrive\\Máy tính\\optifin-ai\\AIFinanceAdvisor.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages",
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\84353\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\trana\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +28,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,12 +47,17 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.14, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -65,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

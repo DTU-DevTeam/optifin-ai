@@ -1,5 +1,6 @@
 ﻿using AIFinanceAdvisor.Core.Services;
-
+using AIFinanceAdvisor.Infrastructure.DatabaseContext;
+using Microsoft.EntityFrameworkCore;
 using OpenAI.Chat;
 using System.Net.WebSockets;
 using System.Text;
@@ -22,6 +23,10 @@ builder.Services.AddControllersWithViews();
 builder.Configuration.SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json", optional: true, reloadOnChange: true).AddUserSecrets<Program>();
 
 //builder.Services.AddSingleton<IChatClient, ChatClient>();
+builder.Services.AddDbContext<ApplicationDbContext>
+    (options => {
+        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+    });
 
 
 

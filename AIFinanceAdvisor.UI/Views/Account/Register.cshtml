@@ -14,14 +14,18 @@
 
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
-
+    <link rel="stylesheet" href="~/Dashboard-Style.css">
 
 </head>
 <body>
+    <video autoplay loop muted id="background-video">
+        <source src="https://res.cloudinary.com/diah3fvt1/video/upload/v1740493218/pdkxhfvrf2ihz0hwmeb4.mp4"
+                type="video/mp4">
+    </video>
     <section class="container forms">
 
         <div class="form login">
-            <a id="close" href="~/home/index"><i class="fi fi-br-cross-small"></i></a>
+            <a id="close" href="~/"><i class="fi fi-br-cross-small"></i></a>
             <div class="form-content">
                 <header>Register</header>
                 <form asp-action="register" asp-controller="account" method="post">
@@ -45,18 +49,10 @@
                     </div>
 
                     <div class="error-message">
-
-                        @*{
-                        var errorsJson = TempData["Error"] as string;
-                        var errors = errorsJson != null ? JsonConvert.DeserializeObject<List<string>>(errorsJson) : new List<string>();
-                        if (errors != null)
+                        @if(ViewBag.ErrorMessage != null)
                         {
-                        foreach (var error in errors)
-                        {
-                        <p>@error</p>
+                            <p style="color: red;">@ViewBag.ErrorMessage</p>
                         }
-                        }
-                        }*@
                     </div>
 
                     <div class="field button-field">
@@ -65,7 +61,7 @@
                 </form>
 
                 <div class="form-link">
-                    <span>Have an account? <a href="~/acount/login" class="link signup-link">Login</a></span>
+                    <span>Have an account? <a href="~/account/login" class="link signup-link">Login</a></span>
                 </div>
             </div>
 
@@ -118,12 +114,12 @@
         width: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        /* justify-content: center;*/
         /*background-color: #4070f4;*/
         column-gap: 30px;
         position: fixed; /* hoặc absolute, fixed, sticky */
         z-index: 15; /* Giá trị số, càng lớn thì càng nằm trên */
-        padding-left: 170px;
+        padding-left: 590px;
         margin-top: -40px;
     }
 

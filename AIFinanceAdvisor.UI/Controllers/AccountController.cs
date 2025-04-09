@@ -46,8 +46,11 @@ namespace AIFinanceAdvisor.UI.Controllers
                 var claims = new List<Claim>
                 {
                    new Claim(ClaimTypes.Name, model.Username), // Lưu username vào Claim
+                   new Claim(ClaimTypes.NameIdentifier, data.id.ToString()),
                    new Claim("UserRole", "User") // Thêm role nếu cần
                 };
+
+
 
                 // 2. Tạo ClaimsIdentity
                 var identity = new ClaimsIdentity(claims, "CookieAuth");
@@ -78,7 +81,14 @@ namespace AIFinanceAdvisor.UI.Controllers
         {
             if (!ModelState.IsValid)
             {
+                var errorMessages = ModelState.Values
+               .SelectMany(v => v.Errors)
+               .Select(e => e.ErrorMessage)
+               .ToList();
+
+                ViewBag.ErrorMessage = string.Join("; ", errorMessages);
                 return View();
+                
             }
 
             var _httpClient = _httpClientFactory.CreateClient();
@@ -104,6 +114,13 @@ namespace AIFinanceAdvisor.UI.Controllers
                 ViewBag.ErrorMessage = data.message;
                 return View();
             }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync("CookieAuth");
+            return RedirectToAction("Dashboard", "OptiFin");
         }
     }
 }

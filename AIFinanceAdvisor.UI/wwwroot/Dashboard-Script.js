@@ -31,7 +31,7 @@ let typingTimeout;
 // USERS INFORMATION //
 
 // LOGIN FORM //
-document.addEventListener("DOMContentLoaded", function () {
+/*document.addEventListener("DOMContentLoaded", function () {
     let loginButton = document.getElementById("login-btn");
     let loginModal = document.getElementById("login-modal");
     let closeModal = document.getElementById("close-login");
@@ -58,7 +58,7 @@ function checkLoginStatus() {
     if (!isLoggedIn) {
         document.getElementById("user-info").style.display = "flex"; // Hiển thị form nhập tên và email
     }
-}
+}*/
 // STATUS OF USERS CHECKING //
 
 // Lưu thông tin người dùng khi đăng nhập
